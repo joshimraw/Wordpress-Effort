@@ -163,3 +163,36 @@ font-size: 90%;
   color: #333;
   cursor: default;
  }
+
+ /* Post styles*/
+
+ .post h2{
+  margin-bottom: 0px;
+ }
+ p.post-inof{
+  font-size: 87%;
+  color: #999;
+ }
+ p.post-info a:link,
+ p.post-info a:visited{
+  color: #999;
+ }
+
+ /*Image Style*/
+
+ img{
+  max-width: 100%;
+  height: auto;
+ }
+
+ .has-thumbnail{
+  position: relative;
+  padding-left: 200px;
+
+ }
+ .post-thumbnail{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+ }

@@ -26,8 +26,29 @@ function get_top_ancestor_id(){
 }
 
 // Does page have children?
-function has_children(){
-	global $post;
-	$pages = get_page('child_of=' .$post->ID);
-	return count($pages);
+// function has_children(){
+// 	global $post;
+// 	$pages = get_page('child_of=' .$post->ID);
+// 	return count($pages); }
+
+// Customize cecerpt word count lenght
+
+function custom_excerpt_length(){
+	return 50;
 }
+add_filter('excerpt_length', 'custom_excerpt_length');
+
+
+// Add feature image support
+function netkits_setup(){
+	register_nav_menus(array(
+	'primary' => __( 'Primary Menu' ),
+	'footer' => __( 'Footer Menu' ),
+	
+	));
+
+	add_theme_support('post-thumbnails');
+	add_image_size('small-thumbnail', 180, 120, ture);
+	add_image_size('banner-image', 920, 210, ture);
+}
+add_action('after_setup_theme', 'netkits_setup');

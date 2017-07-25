@@ -11,7 +11,14 @@ if(have_posts()):
 		<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a>
 		</p>
 		
-	<p2><?php the_content(); ?></p2>
+	<p>
+
+		<?php the_post_thumbnail('banner-image'); ?>
+
+		<p><?php the_content(); ?>
+		
+	</p>
+	</p>
 	</article>
 	
 	<?php endwhile;
